@@ -10,9 +10,8 @@ const Dropdown = (props) => {
       body: JSON.stringify({
         cuisine: dropdown.value,
       }),
-    })
-    .then((data) => data.json())
-    .then((data) => );
+    }).then((data) => data.json());
+    // .then((data) => );
   };
 
   return (
