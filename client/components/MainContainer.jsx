@@ -6,7 +6,9 @@ import RecipeContainer from './RecipeContainer.jsx';
 const MainContainer = (props) => {
   return (
     <div classname='mainContainer'>
-      <Dropdown></Dropdown>
+      {/* We might add our website name and logo in this portion as a component */}
+
+      <Dropdown func={buttonClick}></Dropdown>
       {/* <RecipeContainer></RecipeContainer> */}
     </div>
   );
