@@ -1,13 +1,13 @@
 import React from 'react';
 //need to import/add app name component
 import Dropdown from './Dropdown.jsx';
-import RecipeContainer from './Recipe Container.jsx';
+import RecipeContainer from './RecipeContainer.jsx';
 
 const MainContainer = (props) => {
   return (
     <div classname='mainContainer'>
       <Dropdown></Dropdown>
-      <RecipeContainer></RecipeContainer>
+      {/* <RecipeContainer></RecipeContainer> */}
     </div>
   );
 };
