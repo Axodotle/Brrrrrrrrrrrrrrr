@@ -4,14 +4,14 @@ const Dropdown = (props) => {
   //function that runs on buttonclick
   //on click, we would grab the current value stingify it
   const buttonClick = () => {
-    const dropdown = document.querySelector('#cuisine');
-    fetch('api/cuisine', {
-      method: 'GET',
-      body: JSON.stringify({
-        cuisine: dropdown.value,
-      }),
-    }).then((data) => data.json());
-    // .then((data) => );
+    const dropdown = document.querySelector('#cuisine'); // dropdown.value : 'italian'
+    // fetch('api/cuisine', {
+    //   method: 'GET',
+    //   body: JSON.stringify({
+    //     cuisine: dropdown.value,
+    //   }),
+    // }).then((data) => data.json());
+    // // .then((data) => );
   };
 
   return (
@@ -28,7 +28,7 @@ const Dropdown = (props) => {
         <option value='african'>African</option>
         <option value='african'>African</option>
       </select>
-      <button id='button' onClick={props.func}>
+      <button id='button' onClick={buttonClick}>
         Submit
       </button>
     </div>
