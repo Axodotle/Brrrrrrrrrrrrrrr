@@ -1,16 +1,18 @@
 const path = require('path');
 const express = require('express');
-const bodyParser = require('body-parser');
 
 const app = express();
 const PORT = process.env.PORT || 8080;
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
-app.get('/api/cuisine', spoonacularController.getByCuisine, (req, res) => {
-  res.status(200).end('yumyums');
-})
+app.get(
+  '/api/cuisine',
+  /*spoonacularController.getByCuisine,*/ (req, res) => {
+    res.status(200).end('yumyums');
+  }
+);
 
 app.use((req, res) => {
   res.sendStatus(404);
