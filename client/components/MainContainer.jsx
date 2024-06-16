@@ -7,7 +7,7 @@ const MainContainer = (props) => {
   // Main container will eventually receive the data from server and pass data to child component (recipe container)
 
   return (
-    <div classname='mainContainer'>
+    <div className='mainContainer'>
       {/* We might add our website name and logo in this portion as a component */}
 
       <Dropdown />

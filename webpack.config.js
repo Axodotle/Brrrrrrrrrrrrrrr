@@ -38,20 +38,24 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        use: [/*MiniCssExtractPlugin.loader,*/ 'css-loader'],
+        use: [
+          /*MiniCssExtractPlugin.loader,*/
+          'style-loader',
+          'css-loader',
+        ],
       },
     ],
   },
 
   devServer: {
     historyApiFallback: true,
-      proxy: [
-        {
-          context: ['/api'],
-          target: 'http://localhost:8080',
-          changeOrigin: true,
-        },
-      ],
+    proxy: [
+      {
+        context: ['/api'],
+        target: 'http://localhost:8080',
+        changeOrigin: true,
+      },
+    ],
     port: 3000,
     hot: true,
   },

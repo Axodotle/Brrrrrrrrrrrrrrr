@@ -1,10 +1,13 @@
 import React from 'react';
+import RecipeCard from './RecipeCard.jsx';
 
 const RecipeContainer = () => {
   console.log('hey');
 
   return (
-    <div>
+    <div id='RecipeContainer'>
+      <RecipeCard />
+      <RecipeCard />
       <RecipeCard />
     </div>
   );
