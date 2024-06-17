@@ -5,10 +5,24 @@ const RecipeContainer = (props) => {
   const { recipesState } = props;
 
   const recipes = recipesState.map((recipe) => {
-    <RecipeCard name={recipe.name} />;
+    <RecipeCard
+      name={recipe.title}
+      ingredients={recipe.array}
+      image={recipe.image} //add ingredient properties here
+    />;
   });
 
-  return <div>{recipes}</div>;
+  return (
+    <div id='RecipeContainer'>
+      <RecipeCard />
+      <RecipeCard />
+      <RecipeCard />
+      <RecipeCard />
+      <RecipeCard />
+      <RecipeCard />
+      {/* {recipes} */}
+    </div>
+  );
 };
 
 export default RecipeContainer;

@@ -1,7 +1,28 @@
 import React from 'react';
+import Ingredient from './Ingredient.jsx';
+import { nanoid } from 'nanoid';
 
 const RecipeCard = (props) => {
-  const { name } = props;
+  const { name, array, image } = props;
+
+  const testArr = [
+    { name: 'eggs' },
+    { name: 'milk' },
+    { name: 'cheese' },
+    { name: 'watermelon' },
+    { name: 'caviar' },
+  ];
+
+  const ingredients = [];
+  for (let i = 0; i < 5; i++) {
+    ingredients.push(<Ingredient ingName={testArr[i].name} key={nanoid()} />);
+  }
+
+  //   const ingredients = testArr.map((ingredient) => {
+  //     console.log(ingredient.name);
+  //     <h5>{ingredient.name}</h5>;
+  //   });
+  console.log(ingredients);
 
   return (
     <div className='RecipeCard'>
@@ -11,11 +32,13 @@ const RecipeCard = (props) => {
       />
       <h2 className='RecipeCardTitle'>Recipe Name</h2>
       <ul className='RecipeCardIngredients'>
-        <li>Ingredient 1</li>
+        {ingredients}
+        {/* <li>Ingredient 1</li>
         <li>Ingredient 2</li>
         <li>Ingredient 3</li>
         <li>Ingredient 4</li>
-        <li>Ingredient 5</li>
+        <li>Ingredient 5</li> */}
+        {/* {ingredients} */}
       </ul>
     </div>
   );
