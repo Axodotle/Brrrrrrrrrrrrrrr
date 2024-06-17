@@ -23,14 +23,42 @@ const apiServices = {
     const url = `${SpoonBaseURL}${endpoint}${urlParams}`;
     console.log(url);
 
+    const delay = () => new Promise((resolve) => setTimeout(resolve, 2000));
+
     //Final Step - fetch using newly constructed URL and return response from external API
-    return fetch(url).then((res) => {
-      // Check if response is successfull
-      if (!res.ok) {
-        throw new Error(`Responde failed @ ${res}: ${res.status}`);
-      }
-      return res.json();
+    return delay().then(() => {
+      return fetch(url)
+        .then((res) => {
+          if (!res.ok) {
+            throw new Error(`Response failed @ ${endpoint}: ${res.status}`);
+          }
+          return res.json();
+        })
+        .catch((err) => {
+          throw new Error(`Fetch failed: ${err.message}`);
+        });
     });
+  },
+
+  fetchIngredientWidget(recipeId) {
+    const endpoint = `/recipes/${recipeId}/ingredientWidget.json/?`;
+    const url = `${SpoonBaseURL}${endpoint}${SpoonAuth}`;
+
+    console.log(url);
+
+    return fetch(url)
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(`Response failed @ ${endpoint}: ${res.status}`);
+        }
+        return res.json();
+      })
+      .then((data) => {
+        return data.ingredients; // Extracting only the 'ingredients' array
+      })
+      .catch((err) => {
+        throw new Error(`Fetch failed: ${err.message}`);
+      });
   },
 };
 

@@ -43,6 +43,11 @@
   color: whitesmoke;
 }
 
+#button:hover {
+  background-color: rgb(208, 76, 49);
+  cursor: pointer;
+}
+
 #RecipeContainer {
   /*allows for wrapping and keeps them centered*/
   display: flex;
@@ -79,7 +84,7 @@
 to apply effects to child objects*/
 .RecipeCard:hover > .RecipeCardImage {
   transition: opacity 0.3s ease-in;
-  opacity: 0.7;
+  opacity: 0.5;
 }
 
 .RecipeCardTitle {

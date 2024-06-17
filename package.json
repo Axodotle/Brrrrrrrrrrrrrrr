@@ -6,6 +6,7 @@
   "scripts": {
     "start-back": "nodemon ./server/server.js",
     "start-front": "webpack-dev-server --open",
+    "start": "concurrently \"npm run start-back\" \"npm run start-front\"",
     "build": "webpack"
   },
   "repository": {
@@ -36,6 +37,7 @@
     "@eslint/compat": "^1.1.0",
     "@eslint/js": "^9.5.0",
     "babel-loader": "^9.1.3",
+    "concurrently": "^8.2.2",
     "copy-webpack-plugin": "^12.0.2",
     "css-loader": "^7.1.2",
     "eslint": "^9.5.0",
