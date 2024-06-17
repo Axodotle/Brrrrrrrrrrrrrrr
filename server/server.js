@@ -1,6 +1,13 @@
 const path = require('path');
 const express = require('express');
-const searchController = require('./controllers/searchController');
+// // Controllers now handled withinappropriate routers
+// const searchController = require('./controllers/searchController');
+
+// Added routers - ideally these would reside in 'apiRouter.js' in order to reduce clutter
+const imageRouter = require('./routes/imageRouter');
+const recipeRouter = require('./routes/recipeRouter');
+const searchRouter = require('./routes/searchRouter');
+const widgetRouter = require('./routes/widgetRouter');
 
 const app = express();
 const PORT = process.env.PORT || 8080;
@@ -8,16 +15,24 @@ const PORT = process.env.PORT || 8080;
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+/*
 app.get(
   '/api/cuisine',
   searchController.getByCuisine, (req, res) => {
     return res.status(200).json(res.locals.recipeData);
   }
 );
+*/
 
 app.use((req, res) => {
   return res.sendStatus(404);
 });
+
+// Routes
+app.use('/api/images', imageRouter);
+app.use('/api/recipe', recipeRouter);
+app.use('/api/search', searchRouter);
+app.use('/api/widgets', widgetRouter);
 
 app.use((err, req, res, next) => {
   let defaultErr = {
