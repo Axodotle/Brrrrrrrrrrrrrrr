@@ -1,18 +1,7 @@
 import React from 'react';
 
 const Dropdown = (props) => {
-  //function that runs on buttonclick
-  //on click, we would grab the current value stingify it
-  const buttonClick = () => {
-    const dropdown = document.querySelector('#cuisine'); // dropdown.value : 'italian'
-    // fetch('api/cuisine', {
-    //   method: 'GET',
-    //   body: JSON.stringify({
-    //     cuisine: dropdown.value,
-    //   }),
-    // }).then((data) => data.json());
-    // // .then((data) => );
-  };
+  const { buttonClick } = props;
 
   return (
     <div className='dropdown'>
@@ -24,9 +13,8 @@ const Dropdown = (props) => {
         <option value='carribean'>Carribean</option>
         <option value='indian'>Indian</option>
         <option value='italian'>Italian</option>
+        <option value='mediterranean'>Mediterranean</option>
         <option value='mexican'>Mexican</option>
-        <option value='african'>African</option>
-        <option value='african'>African</option>
       </select>
       <button id='button' onClick={buttonClick}>
         Submit

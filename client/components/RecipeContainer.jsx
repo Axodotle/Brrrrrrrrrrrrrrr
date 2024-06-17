@@ -1,16 +1,14 @@
 import React from 'react';
 import RecipeCard from './RecipeCard.jsx';
 
-const RecipeContainer = () => {
-  console.log('hey');
+const RecipeContainer = (props) => {
+  const { recipesState } = props;
 
-  return (
-    <div id='RecipeContainer'>
-      <RecipeCard />
-      <RecipeCard />
-      <RecipeCard />
-    </div>
-  );
+  const recipes = recipesState.map((recipe) => {
+    <RecipeCard name={recipe.name} />;
+  });
+
+  return <div>{recipes}</div>;
 };
 
 export default RecipeContainer;

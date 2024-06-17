@@ -1,6 +1,8 @@
 import React from 'react';
 
-const RecipeCard = () => {
+const RecipeCard = (props) => {
+  const { name } = props;
+
   return (
     <div className='RecipeCard'>
       <img
