@@ -1,0 +1,76 @@
+div {
+  background-color: lightpink;
+}
+
+#RecipeContainer {
+  /*allows for wrapping and keeps them centered*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: whitesmoke;
+}
+
+.RecipeCard {
+  /*rems are based off of the font-size property of the html element*/
+  flex: 0 0 25rem;
+  height: 35rem;
+  border-radius: 1rem;
+  /*if margin is given two values, it will set top and bottom to the first and left and right to the second*/
+  margin: 2rem 0.75rem;
+  /*this prevents any content from being shown outside the bounds of the card*/
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 10rem 30rem 5rem rgba(0, 0, 0, 0.2);
+}
+
+.RecipeCardImage {
+  position: absolute;
+  /*these three lines will scale our huge image to just fill
+  the card*/
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+
+  opacity: 0.7;
+  transition: opacity 0.2s ease-out;
+}
+
+/*hover is a pseudo-class, the > allows you to use a hover on a parent
+to apply effects to a child object*/
+.RecipeCard:hover > .RecipeCardImage {
+  transition: opacity 0.3s ease-in;
+  opacity: 1;
+}
+
+.RecipeCardTitle {
+  position: absolute;
+  inset: auto auto 1rem 1rem;
+  margin: 0;
+  /* see MDN for transition CSS property
+  shorthand for property, duration, timing-function, delay (and behavior, not used here)
+  */
+  transition: inset 0.3s ease-out 0.3s;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: antiquewhite;
+}
+
+.RecipeCard:hover > .RecipeCardTitle {
+  inset: auto auto 8rem 1rem;
+  transition: inset 0.3s ease-out;
+}
+
+.RecipeCardIngredients {
+  position: absolute;
+  opacity: 0;
+  max-width: 80%;
+  transition: opacity 0.3s ease-out;
+  inset: auto auto 1rem 0.5rem;
+  color: antiquewhite;
+}
+
+.RecipeCard:hover > .RecipeCardIngredients {
+  opacity: 1;
+  transition: opacity 0.5s ease-in 0.1s;
+}

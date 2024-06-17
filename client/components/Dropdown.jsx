@@ -5,7 +5,7 @@ const Dropdown = (props) => {
 
   return (
     <div className='dropdown'>
-      <label for='cuisine'>What cuisine are you in the mood for?</label>
+      <label htmlFor='cuisine'>What cuisine are you in the mood for?</label>
       <select name='cuisine' id='cuisine'>
         <option value='african'>African</option>
         <option value='asian'>Asian</option>
