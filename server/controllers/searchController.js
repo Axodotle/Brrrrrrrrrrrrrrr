@@ -21,13 +21,14 @@ searchController.getByCuisine = (req, res, next) => {
     sort: 'random',
     cuisine,
     number,
-    addRecipeInformation: true,
+    addRecipeInformation: false,
     addRecipeInstructions: false,
   };
   apiServices
     .fetchSpoonacular(endpoint, params)
     .then((data) => {
       res.locals.results = data.results;
+      res.locals.recipeId = data.results[0].id;
       return next();
     })
     .catch((err) => {
@@ -35,6 +36,24 @@ searchController.getByCuisine = (req, res, next) => {
         log: `searchController.getByCuisine ERROR: ${err}`,
         status: 500,
         message: { err: 'Error retrieving recipes' },
+      });
+    });
+};
+
+searchController.fetchIngredients = (req, res, next) => {
+  const { recipeId } = res.locals;
+
+  apiServices
+    .fetchIngredientWidget(recipeId)
+    .then((ingredientData) => {
+      res.locals.ingredients = data.ingredients;
+      next();
+    })
+    .catch((err) => {
+      next({
+        log: `searchController.fetchIngredients ERROR: ${err}`,
+        status: 500,
+        message: { err: 'Error fetching ingredients' },
       });
     });
 };

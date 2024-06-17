@@ -19,12 +19,10 @@ const Dropdown = (props) => {
         <option value='mexican'>Mexican</option>
       </select>
       <button id='button' onClick={buttonClick}>
-        Submit
+        Search
       </button>
     </div>
   );
 };
 
 export default Dropdown;
-
-// We expect to send {cuisine: 'american'}
