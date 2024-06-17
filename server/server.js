@@ -4,10 +4,10 @@ const express = require('express');
 // const searchController = require('./controllers/searchController');
 
 // Added routers - ideally these would reside in 'apiRouter.js' in order to reduce clutter
-const imageRouter = require('./routes/imageRouter');
-const recipeRouter = require('./routes/recipeRouter');
+// const imageRouter = require('./routes/imageRouter');
+// const recipeRouter = require('./routes/recipeRouter');
 const searchRouter = require('./routes/searchRouter');
-const widgetRouter = require('./routes/widgetRouter');
+// const widgetRouter = require('./routes/widgetRouter');
 
 const app = express();
 const PORT = process.env.PORT || 8080;
@@ -24,15 +24,15 @@ app.get(
 );
 */
 
+// Routes
+// app.use('/api/images', imageRouter);
+// app.use('/api/recipe', recipeRouter);
+app.use('/api/search', searchRouter);
+// app.use('/api/widgets', widgetRouter);
+
 app.use((req, res) => {
   return res.sendStatus(404);
 });
-
-// Routes
-app.use('/api/images', imageRouter);
-app.use('/api/recipe', recipeRouter);
-app.use('/api/search', searchRouter);
-app.use('/api/widgets', widgetRouter);
 
 app.use((err, req, res, next) => {
   let defaultErr = {
@@ -42,6 +42,7 @@ app.use((err, req, res, next) => {
   };
 
   const errorObj = Object.assign(defaultErr, err);
+  console.log(errorObj.log)
   return res.status(errorObj.status).json(errorObj.message); //either it returns the default or the updated err
 });
 

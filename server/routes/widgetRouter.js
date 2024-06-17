@@ -1,8 +1,8 @@
-const express = require('express');
-const cuisineController = require('../controllers/widgetController');
+// const express = require('express');
+// const cuisineController = require('../controllers/widgetController');
 
-const router = express.Router();
+// const router = express.Router();
 
-router.get('/widgets', widgetController.buildWidget);
+// router.get('/widgets', widgetController.buildWidget);
 
-module.exports = router;
+// module.exports = router;

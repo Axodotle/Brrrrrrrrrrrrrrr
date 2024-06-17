@@ -8,29 +8,28 @@ const Spoon_API_KEY = 'd1a663cd43824e828a871cad5a7e6714';
 // const YYYYYY_API_KEY = ""
 // const ZZZZZZ_API_KEY = ""
 const SpoonBaseURL = 'https://api.spoonacular.com';
-const SpoonAuth = `apiKey=${Spoon_API_KEY}`;
+const SpoonAuth = `?apiKey=${Spoon_API_KEY}`;
 const apiServices = {
   fetchSpoonacular(endpoint, params) {
     // used const to make sure "key" can't be reassigned within the loop
     for (const key in params) {
       if (params.hasOwnProperty(key)) {
         // Append using API-specified syntax
-        params += `&${key}=${params[key]}`;
+        params += `&${key}=${encodeURIComponent(params[key])}`;
       }
     }
+    const url = `${SpoonBaseURL}${endpoint}${SpoonAuth}${params}`;
+
+    //Final Step - fetch using newly constructed URL and return response from external API
+    return fetch(url).then((res) => {
+      // Check if response is successfull
+      if (!res.ok) {
+        throw new Error(`Responde failed @ ${res}: ${res.status}`);
+      }
+      return res.json();
+    });
   },
 };
-
-const url = `${SpoonBaseURL}${endpoint}?${SpoonAuth}`;
-
-//Final Step - fetch using newly constructed URL and return response from external API
-return fetch(url).then((response) => {
-  // Check if response is successfull
-  if (!response.ok) {
-    throw new Error(`Responde failed @ ${endpoint}: ${response.status}`);
-  }
-  return response.json();
-});
 
 module.exports = apiServices;
 
