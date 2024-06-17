@@ -1,0 +1,160 @@
+https://api.spoonacular.com/recipes/complexSearch/?apiKey=d1a663cd43824e828a871cad5a7e6714&sort=random&cuisine=italian&number=2&addRecipeInformation=true&addRecipeInstructions=false
+{
+    "results": [
+        {
+            "vegetarian": false,
+            "vegan": false,
+            "glutenFree": true,
+            "dairyFree": false,
+            "veryHealthy": false,
+            "cheap": false,
+            "veryPopular": false,
+            "sustainable": false,
+            "lowFodmap": false,
+            "weightWatcherSmartPoints": 19,
+            "gaps": "no",
+            "preparationMinutes": null,
+            "cookingMinutes": null,
+            "aggregateLikes": 0,
+            "healthScore": 24,
+            "creditsText": "Full Belly Sisters",
+            "license": "CC BY-SA 3.0",
+            "sourceName": "Full Belly Sisters",
+            "pricePerServing": 280.71,
+            "id": 826557,
+            "title": "Italian Stuffed Pepper Cauliflower Rice Skillet",
+            "readyInMinutes": 45,
+            "servings": 4,
+            "sourceUrl": "https://fullbellysisters.blogspot.com/2016/10/italian-stuffed-pepper-cauliflower-rice.html",
+            "image": "https://img.spoonacular.com/recipes/826557-312x231.png",
+            "imageType": "png",
+            "summary": "Forget going out to eat or ordering takeout every time you crave Mediterranean food. Try making Italian Stuffed Pepper Cauliflower Rice Skillet at home. This side dish has <b>601 calories</b>, <b>37g of protein</b>, and <b>45g of fat</b> per serving. This recipe serves 4 and costs $2.81 per serving. 1 person has made this recipe and would make it again. If you have garlic, cauliflower, carrot, and a few other ingredients on hand, you can make it. It is a good option if you're following a <b>gluten free, primal, and ketogenic</b> diet. It is brought to you by fullbellysisters.blogspot.com. From preparation to the plate, this recipe takes roughly <b>roughly 45 minutes</b>. Taking all factors into account, this recipe <b>earns a spoonacular score of 0%</b>, which is improvable. Similar recipes are <a href=\"https://spoonacular.com/recipes/cauliflower-brown-rice-and-vegetable-fried-rice-716426\">Cauliflower, Brown Rice, and Vegetable Fried Rice</a>, <a href=\"https://spoonacular.com/recipes/italian-chicken-with-pepper-648097\">Italian Chicken With Pepper</a>, and <a href=\"https://spoonacular.com/recipes/crispy-italian-cauliflower-poppers-appetizer-640819\">Crispy Italian Cauliflower Poppers Appetizer</a>.",
+            "cuisines": [
+                "Mediterranean",
+                "Italian",
+                "European"
+            ],
+            "dishTypes": [
+                "side dish"
+            ],
+            "diets": [
+                "gluten free",
+                "primal",
+                "ketogenic"
+            ],
+            "occasions": [],
+            "spoonacularScore": 64.62773132324219,
+            "spoonacularSourceUrl": "https://spoonacular.com/italian-stuffed-pepper-cauliflower-rice-skillet-826557"
+        }
+    ],
+    "offset": 0,
+    "number": 1,
+    "totalResults": 265
+}
+
+
+
+
+
+
+{
+    "results": [
+        {
+            "vegetarian": true,
+            "vegan": true,
+            "glutenFree": false,
+            "dairyFree": true,
+            "veryHealthy": true,
+            "cheap": false,
+            "veryPopular": false,
+            "sustainable": false,
+            "lowFodmap": false,
+            "weightWatcherSmartPoints": 12,
+            "gaps": "no",
+            "preparationMinutes": null,
+            "cookingMinutes": null,
+            "aggregateLikes": 5,
+            "healthScore": 61,
+            "creditsText": "Foodista.com – The Cooking Encyclopedia Everyone Can Edit",
+            "license": "CC BY 3.0",
+            "sourceName": "Foodista",
+            "pricePerServing": 189.3,
+            "id": 658753,
+            "title": "Roma Tomato Bruschetta",
+            "readyInMinutes": 45,
+            "servings": 4,
+            "sourceUrl": "https://www.foodista.com/recipe/M3RH6LBH/roma-tomato-bruschetta",
+            "image": "https://img.spoonacular.com/recipes/658753-312x231.jpg",
+            "imageType": "jpg",
+            "summary": "Need a <b>dairy free, lacto ovo vegetarian, and vegan hor d'oeuvre</b>? Roma Tomato Bruschetta could be an outstanding recipe to try. One serving contains <b>446 calories</b>, <b>13g of protein</b>, and <b>17g of fat</b>. This recipe serves 4 and costs $1.89 per serving. If you have basil, extra virgin olive oil, bread, and a few other ingredients on hand, you can make it. 5 people have made this recipe and would make it again. It is an <b>affordable</b> recipe for fans of Mediterranean food. It is brought to you by Foodista. From preparation to the plate, this recipe takes about <b>45 minutes</b>. Overall, this recipe earns a <b>tremendous spoonacular score of 91%</b>. Try <a href=\"https://spoonacular.com/recipes/roma-tomato-rings-stuffed-with-cream-cheese-107091\">Roma Tomato Rings Stuffed With Cream Cheese</a>, <a href=\"https://spoonacular.com/recipes/tomato-bruschetta-367864\">Tomato Bruschetta</a>, and <a href=\"https://spoonacular.com/recipes/tomato-bruschetta-543381\">Tomato Bruschetta</a> for similar recipes.",
+            "cuisines": [
+                "Mediterranean",
+                "Italian",
+                "European"
+            ],
+            "dishTypes": [
+                "fingerfood",
+                "antipasti",
+                "starter",
+                "snack",
+                "appetizer",
+                "antipasto",
+                "hor d'oeuvre"
+            ],
+            "diets": [
+                "dairy free",
+                "lacto ovo vegetarian",
+                "vegan"
+            ],
+            "occasions": [],
+            "spoonacularScore": 92.51570892333984,
+            "spoonacularSourceUrl": "https://spoonacular.com/roma-tomato-bruschetta-658753"
+        },
+        {
+            "vegetarian": false,
+            "vegan": false,
+            "glutenFree": false,
+            "dairyFree": false,
+            "veryHealthy": false,
+            "cheap": false,
+            "veryPopular": false,
+            "sustainable": false,
+            "lowFodmap": false,
+            "weightWatcherSmartPoints": 19,
+            "gaps": "no",
+            "preparationMinutes": null,
+            "cookingMinutes": null,
+            "aggregateLikes": 1,
+            "healthScore": 9,
+            "creditsText": "foodista.com",
+            "sourceName": "foodista.com",
+            "pricePerServing": 231.98,
+            "id": 637054,
+            "title": "Caramelized Onion and Bacon Pizza",
+            "readyInMinutes": 45,
+            "servings": 4,
+            "sourceUrl": "https://www.foodista.com/recipe/DX2BY4DB/caramelized-onion-and-bacon-pizza",
+            "image": "https://img.spoonacular.com/recipes/637054-312x231.jpg",
+            "imageType": "jpg",
+            "summary": "If you want to add more <b>Mediterranean</b> recipes to your collection, Caramelized Onion and Bacon Pizza might be a recipe you should try. For <b>$2.32 per serving</b>, you get a main course that serves 4. One portion of this dish contains around <b>26g of protein</b>, <b>33g of fat</b>, and a total of <b>548 calories</b>. 1 person were impressed by this recipe. This recipe from Foodista requires pizza dough, butter, ricotta, and baby spinach. From preparation to the plate, this recipe takes about <b>45 minutes</b>. With a spoonacular <b>score of 43%</b>, this dish is solid. Similar recipes are <a href=\"https://spoonacular.com/recipes/caramelized-onion-bacon-pizza-556268\">Caramelized Onion Bacon Pizza</a>, <a href=\"https://spoonacular.com/recipes/caramelized-onion-spinach-and-bacon-pizza-537842\">Caramelized Onion, Spinach and Bacon Pizza</a>, and <a href=\"https://spoonacular.com/recipes/spinach-caramelized-onion-and-bacon-pizza-235038\">Spinach, Caramelized Onion, and Bacon Pizza</a>.",
+            "cuisines": [
+                "Mediterranean",
+                "Italian",
+                "European"
+            ],
+            "dishTypes": [
+                "lunch",
+                "main course",
+                "main dish",
+                "dinner"
+            ],
+            "diets": [],
+            "occasions": [],
+            "spoonacularScore": 50.78508377075195,
+            "spoonacularSourceUrl": "https://spoonacular.com/caramelized-onion-and-bacon-pizza-637054"
+        }
+    ],
+    "offset": 0,
+    "number": 2,
+    "totalResults": 265
+}
