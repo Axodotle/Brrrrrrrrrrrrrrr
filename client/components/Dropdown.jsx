@@ -4,8 +4,10 @@ const Dropdown = (props) => {
   const { buttonClick } = props;
 
   return (
-    <div className='dropdown'>
-      <label htmlFor='cuisine'>What cuisine are you in the mood for?</label>
+    <div id='Dropdown'>
+      <label id='DropdownQuestion' htmlFor='cuisine'>
+        What cuisine are you in the mood for?
+      </label>
       <select name='cuisine' id='cuisine'>
         <option value='african'>African</option>
         <option value='asian'>Asian</option>

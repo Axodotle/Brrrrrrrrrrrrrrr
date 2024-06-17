@@ -8,17 +8,20 @@ const Spoon_API_KEY = 'd1a663cd43824e828a871cad5a7e6714';
 // const YYYYYY_API_KEY = ""
 // const ZZZZZZ_API_KEY = ""
 const SpoonBaseURL = 'https://api.spoonacular.com';
-const SpoonAuth = `?apiKey=${Spoon_API_KEY}`;
+const SpoonAuth = `apiKey=${Spoon_API_KEY}`;
 const apiServices = {
   fetchSpoonacular(endpoint, params) {
     // used const to make sure "key" can't be reassigned within the loop
+    let urlParams = `?${SpoonAuth}`;
+
     for (const key in params) {
       if (params.hasOwnProperty(key)) {
         // Append using API-specified syntax
-        params += `&${key}=${encodeURIComponent(params[key])}`;
+        urlParams += `&${key}=${encodeURIComponent(params[key])}`;
       }
     }
-    const url = `${SpoonBaseURL}${endpoint}${SpoonAuth}${params}`;
+    const url = `${SpoonBaseURL}${endpoint}${urlParams}`;
+    console.log(url);
 
     //Final Step - fetch using newly constructed URL and return response from external API
     return fetch(url).then((res) => {

@@ -21,6 +21,8 @@ searchController.getByCuisine = (req, res, next) => {
     sort: 'random',
     cuisine,
     number,
+    addRecipeInformation: true,
+    addRecipeInstructions: false,
   };
   apiServices
     .fetchSpoonacular(endpoint, params)
